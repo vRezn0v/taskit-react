@@ -24,9 +24,9 @@ body {
 }
 
 .header {
+  background: #1a1a1a;
   padding: 20px;
-  position: sticky;
-  top: 0;
+  z-index: 999;
 }
 
 .header h1 {
@@ -113,7 +113,8 @@ form button:hover {
   position: relative;
   transition: all 1s ease;
   box-shadow: 3px 3px #1f1f1f;
-  word-wrap: normal;
+  word-wrap: break-word;
+  overflow-y: hidden;
 }
 
 .todo li {
