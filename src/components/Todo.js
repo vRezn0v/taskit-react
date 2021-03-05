@@ -25,8 +25,10 @@ class Todo extends Component {
         <li className={`todo-item ${todo.completed?"completed":''}`}>
           {todo.text}
         </li>
-        <button className="complete-btn" onClick={this.completeHandler}><i className={`${btnclass} fa-check-square`}></i></button>
-        <button className="trash-btn" onClick={this.deleteHandler}><i className="fas fa-trash"></i></button>
+        <div className="actions">
+          <button className="complete-btn" onClick={this.completeHandler}><i className={`${btnclass} fa-check-square`}></i></button>
+          <button className="trash-btn" onClick={this.deleteHandler}><i className="fas fa-trash"></i></button>
+        </div>
       </div>
     );
   }

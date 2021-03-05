@@ -28,7 +28,7 @@ class Form extends Component {
   render() { 
     return (
       <form>
-        <input onChange={e=>this.updateInput(e.target.value)} type="text" className="todo-input" value={this.state.input} />
+        <input onChange={e=>this.updateInput(e.target.value)} type="text" className="todo-input" value={this.state.input} placeholder="Add a task..." />
         <button className="todo-button" type="submit" onClick={this.submitHandler}>
           <i className="fas fa-plus-square"></i>
         </button>

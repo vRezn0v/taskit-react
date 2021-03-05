@@ -67,8 +67,11 @@ class App extends Component {
   render() { 
     return (
       <div className="App">
-        <Form addTodoHandler={this.addTodoHandler} />
-        <Filter filter={this.state.filter} setFilter={this.setFilter} />
+        <div className="header">
+          <h1>TaskIt</h1>
+          <Form addTodoHandler={this.addTodoHandler} />
+          <Filter filter={this.state.filter} setFilter={this.setFilter} />
+        </div>
         <TodoList todos={this.state.todos} filteredList={this.state.filteredList} setTodos={this.setTodos} />
       </div>
     );
