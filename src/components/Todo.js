@@ -21,8 +21,8 @@ class Todo extends Component {
     var btnclass = (todo.completed) ? 'fas' :'far';
 
     return (
-      <div className="todo">
-        <li className={`todo-item ${todo.completed?"completed":''}`}>
+      <div className={`todo ${todo.completed?"completed":''}`}>
+        <li className="todo-item">
           {todo.text}
         </li>
         <div className="actions">

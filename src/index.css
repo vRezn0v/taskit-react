@@ -8,7 +8,7 @@
 }
 body {
   background: #1a1a1a;
-  color: #efefef;
+  color: #afafaf;
   font-family: "DotGothic16", sans-serif;
   min-height: 100vh;
   user-select: none;
@@ -64,8 +64,9 @@ form button {
   transition: all 0.3s ease;
 }
 form button:hover {
-  background: #494949;
-  color: white;
+  background: #131313;
+  color: #9f9f9f;
+  transition: all 0.3s ease;
 }
 
 .todo-container {
@@ -107,14 +108,23 @@ form button:hover {
   margin: 1rem;
   padding: 1rem;
   border-radius: 0.5rem;
-  background: #111111;
+  background: #afafaf;
   font-size: 1.5rem;
-  color: #9f9f9f;
+  color: #313131;
   position: relative;
-  transition: all 1s ease;
-  box-shadow: 3px 3px #1f1f1f;
   word-wrap: break-word;
   overflow-y: hidden;
+  box-shadow: 5px 5px #8f8f8f;
+  transition: all 0.2s ease;
+}
+
+.completed {
+  background: #111111;
+  color: #9f9f9f;
+  opacity: 1;
+  text-decoration: line-through;
+  box-shadow: 5px 5px 1px #3f3f3f;
+  transition: all 0.3s ease;
 }
 
 .todo li {
@@ -135,14 +145,14 @@ form button:hover {
   cursor: pointer;
   font-size: 1rem;
   font-weight: 700;
-  background: #1b1b1b;
+  background: #afafaf;
 }
 
 .todo-item {
   padding: 0rem 0.5rem;
 }
 
-.completed {
-  text-decoration: line-through;
-  opacity: 0.5;
+.completed .trash-btn,
+.completed .complete-btn {
+  background: #111;
 }
