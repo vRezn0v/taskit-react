@@ -1,11 +1,10 @@
 import { Component } from 'react';
 import Form from './components/Form';
 import TodoList from './components/TodoList';
-import ls from 'local-storage';
 import Filter from './components/Filter';
 
 class App extends Component {
-  constructor(props) {
+  /*constructor(props) {
     super(props);
     this.state = {
       todos: [],
@@ -63,16 +62,17 @@ class App extends Component {
       this.setTodos(
         [...this.state.todos, todo])
       }
-  }
+  }*/
+
   render() { 
     return (
       <div className="App">
         <div className="header">
           <h1>TaskIt</h1>
-          <Form addTodoHandler={this.addTodoHandler} />
-          <Filter filter={this.state.filter} setFilter={this.setFilter} />
+          <Form />
+          <Filter />
         </div>
-        <TodoList todos={this.state.todos} filteredList={this.state.filteredList} setTodos={this.setTodos} />
+        <TodoList />
       </div>
     );
   }

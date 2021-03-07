@@ -1,5 +1,6 @@
 import {Component} from 'react';
-
+import { addTodo } from '../redux/actions/actions'
+import { connect } from 'react-redux'
 class Form extends Component {
   constructor(props) {
     super(props);
@@ -15,12 +16,7 @@ class Form extends Component {
   submitHandler = e => {
     e.preventDefault();
     if (this.state.input!==""){
-      var newTask = {
-        text: this.state.input,
-        completed: false,
-        id: Math.random()*1000
-      }
-      this.props.addTodoHandler(newTask);
+      this.props.addTodo(this.state.input);
       this.setState({input: ""})
     }
   }
@@ -36,5 +32,12 @@ class Form extends Component {
     );
   }
 }
+
+const mapDispatchToProps = dispatch => {
+  return {
+    addTodo: text => dispatch(addTodo(text))
+  }
+}
+
  
-export default Form;
+export default connect(null, mapDispatchToProps)(Form);

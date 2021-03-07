@@ -1,19 +1,13 @@
 import { Component } from 'react';
-
+import { toggleTodo, deleteTodo } from '../redux/actions/actions'
+import { connect } from 'react-redux'
 class Todo extends Component {
   deleteHandler = () => {
-    this.props.setTodos(this.props.todos.filter(e => e.id !== this.props.todo.id));
+    this.props.deleteTodo(this.props.todo.id)
   }
 
   completeHandler = () => {
-    var temp = this.props.todos.map(item => {
-      if (item.id === this.props.todo.id) {
-        return {
-          ...item, completed: !item.completed
-        }
-      } else return item;
-    });
-    this.props.setTodos(temp)
+    this.props.toggleTodo(this.props.todo.id)
   }
 
   render() {
@@ -33,5 +27,12 @@ class Todo extends Component {
     );
   }
 }
+
+const mapDispatchToProps = dispatch => {
+  return {
+    toggleTodo: id => dispatch(toggleTodo(id)),
+    deleteTodo: id => dispatch(deleteTodo(id))
+  }
+}
  
-export default Todo;
+export default connect(null, mapDispatchToProps)(Todo);

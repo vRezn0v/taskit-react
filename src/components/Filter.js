@@ -1,5 +1,6 @@
 import {Component} from 'react';
-
+import { setFilter } from '../redux/actions/actions'
+import { connect } from 'react-redux'
 class Filter extends Component {
   constructor(props) {
     super(props);
@@ -8,22 +9,33 @@ class Filter extends Component {
     }
   }
 
-  static getDerivedStateFromProps(props, prevState) {
+  static getDerivedStateFromProps(props,state) {
     return {
       filter: props.filter
     }
   }
 
   render() {
-    const { setFilter } = this.props;
     return (
       <div className="filter">
-        <div onClick={()=>setFilter("NONE")} className={this.state.filter==="NONE"?"active":""}>All</div>
-        <div onClick={()=>setFilter("COMPLETED")} className={this.state.filter==="COMPLETED"?"active":""}>Completed</div>
-        <div onClick={()=>setFilter("INCOMPLETE")} className={this.state.filter==="INCOMPLETE"?"active":""}>Incomplete</div>
+        <div onClick={()=>this.props.setFilter("NONE")} className={this.state.filter==="NONE"?"active":""}>All</div>
+        <div onClick={()=>this.props.setFilter("COMPLETED")} className={this.state.filter==="COMPLETED"?"active":""}>Completed</div>
+        <div onClick={()=>this.props.setFilter("INCOMPLETE")} className={this.state.filter==="INCOMPLETE"?"active":""}>Incomplete</div>
       </div>
     );
   }
 }
- 
-export default Filter;
+
+const mapStateToProps = state => {
+  return {
+    filter: state.todosReducer.filter
+  }
+}
+
+const mapDispatchToProps = dispatch => {
+  return {
+    setFilter: filter => dispatch(setFilter(filter))
+  }
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(Filter);
