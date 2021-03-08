@@ -139,6 +139,7 @@ form button:hover {
 
 .trash-btn,
 .complete-btn {
+  outline: none;
   color: #494949;
   border: none;
   padding: 1rem;

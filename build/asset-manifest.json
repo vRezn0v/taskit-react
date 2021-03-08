@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/taskit-react/static/css/main.013f7429.chunk.css",
+    "main.css": "/taskit-react/static/css/main.70211200.chunk.css",
     "main.js": "/taskit-react/static/js/main.4823e199.chunk.js",
     "main.js.map": "/taskit-react/static/js/main.4823e199.chunk.js.map",
     "runtime-main.js": "/taskit-react/static/js/runtime-main.30eba55c.js",
@@ -8,13 +8,13 @@
     "static/js/2.0f3fcfc5.chunk.js": "/taskit-react/static/js/2.0f3fcfc5.chunk.js",
     "static/js/2.0f3fcfc5.chunk.js.map": "/taskit-react/static/js/2.0f3fcfc5.chunk.js.map",
     "index.html": "/taskit-react/index.html",
-    "static/css/main.013f7429.chunk.css.map": "/taskit-react/static/css/main.013f7429.chunk.css.map",
+    "static/css/main.70211200.chunk.css.map": "/taskit-react/static/css/main.70211200.chunk.css.map",
     "static/js/2.0f3fcfc5.chunk.js.LICENSE.txt": "/taskit-react/static/js/2.0f3fcfc5.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.30eba55c.js",
     "static/js/2.0f3fcfc5.chunk.js",
-    "static/css/main.013f7429.chunk.css",
+    "static/css/main.70211200.chunk.css",
     "static/js/main.4823e199.chunk.js"
   ]
 }
